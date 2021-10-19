@@ -3,7 +3,6 @@ global:
   # Mind more resonable timing in production cause right now this is insane !
 
   scrape_interval: 5s
-  scrape_timeout: 10s
   evaluation_interval: 5s
 
 rule_files:

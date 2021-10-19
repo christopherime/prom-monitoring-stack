@@ -6,6 +6,7 @@ Stack monitoring Prometheus AlertManager
 
 - Replace "localhost" from  prometheus.yml if you want to use docker-compose
 - Download node_exporter <https://github.com/prometheus/node_exporter/releases>
+- Binaries for Prometheus and AlertManager there : <https://prometheus.io/download/>
 
 ## Command
 
