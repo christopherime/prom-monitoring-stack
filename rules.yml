@@ -1,0 +1,15 @@
+
+groups:
+- name: example
+  rules:
+  
+  # Detect if any Prometheus Target is not reachable
+
+  - alert: PrometheusTargetMissing
+    expr: up == 0
+    for: 0m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Prometheus target missing : {{ $labels.service }}"
+      description: "A Prometheus target has disappeared. An exporter might be crashed.\n Hôte = {{ $labels.hostname}}\n service = {{ $labels.service }}\n"
