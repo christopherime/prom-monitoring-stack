@@ -1,0 +1,19 @@
+route:
+  group_wait: 10s
+  group_interval: 30s
+  repeat_interval: 2m
+  receiver: "info"
+
+  routes:
+    - receiver: "info"
+      group_wait: 10s
+      match_re:
+        severity: critial
+      continue: true
+
+receivers:
+  - name: "info"
+    webhook_configs:
+      - url: # Add your URL Address here
+        send_resolved: true
+  
